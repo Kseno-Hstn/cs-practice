@@ -15,5 +15,5 @@ for i in range(n):
 print(f"Всего {all}")
 print(f"Ошибки {errors}")
 print(f"Превышения порога {excess}")
-print(f"Максимальное значение{mx:1f}")
-print(f"Среднее арифмитическое {sm/all:1f}")
+print(f"Максимальное значение{round(mx, 1)}")
+print(f"Среднее арифмитическое {round(sm/all, 1)}")
