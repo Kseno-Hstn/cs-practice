@@ -1,6 +1,6 @@
 porog = float(input())
 n = int(input())
-all, errors, excess, mx, sm = 0, 0, 0, 0, 0
+all, errors, excess, mx, sm = 0, 0, 0, -12364563548763152416285, 0
 for i in range(n):
     znach = input()
     all += 1
