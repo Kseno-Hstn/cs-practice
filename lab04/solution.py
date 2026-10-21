@@ -16,7 +16,7 @@ def average(scores):
 
 def ranking(name, scores):
     results = [(x,y) for x,y in zip(name, scores)]
-    results = sorted(results, reverse = true)
+    results = sorted(results, reverse = True)
     uns = [i[0] for i in results]
     return uns
 
