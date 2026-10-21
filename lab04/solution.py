@@ -19,3 +19,12 @@ def ranking(name, scores):
     results = sorted(results, reverse = true)
     uns = [i[0] for i in results]
     return uns
+
+def above_average(name, scores):
+    sr = aversge(scores)
+    uns = []
+    results = [(x,y) for x,y in zip(name, scores)]
+    for i in results:
+        if i[1] > sr:
+            uns.append(i[0])
+    return uns
