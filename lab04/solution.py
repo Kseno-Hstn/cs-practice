@@ -16,12 +16,12 @@ def average(scores):
 
 def ranking(name, scores):
     results = [(x,y) for x,y in zip(name, scores)]
-    results = sorted(results, reverse = True)
+    results = sorted(results, key=lambda x:x[1], reverse = True)
     uns = [i[0] for i in results]
     return uns
 
 def above_average(name, scores):
-    sr = aversge(scores)
+    sr = average(scores)
     uns = []
     results = [(x,y) for x,y in zip(name, scores)]
     for i in results:
