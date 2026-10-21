@@ -28,3 +28,10 @@ def above_average(name, scores):
         if i[1] > sr:
             uns.append(i[0])
     return uns
+
+
+if __name__ == '__main__':
+    print(winner(names,scores))
+    print(average(scores))
+    print(ranking(names, scores))
+    print(above_average(names, scores))
