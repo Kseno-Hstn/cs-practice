@@ -37,3 +37,13 @@ def total_minutes(rows, kind):
         exept ValueError:
             continue
     return round(sm, 1)
+
+def to_csv(counts):
+    result = 'тип,количество\n'
+    sorted_types = sorted(counts.keys())
+    for i in sorted_types:
+        kolichestvo = counts[i]
+        line = f'{i},{kolichestvo}\n'
+        result += line
+    return result
+
