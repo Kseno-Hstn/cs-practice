@@ -12,7 +12,7 @@ def read_rows(lines):
         znacheniya = [x.strip() for x in i.split(',')]
         if len(znacheniya) != len(zagolovok):
             continue
-        slovar = dict(zip(zagolovok, znacheniya)
+        slovar = dict(zip(zagolovok, znacheniya))
         result.append(slovar)
     return result
 
