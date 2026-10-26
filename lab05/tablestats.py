@@ -6,7 +6,7 @@ def read_rows(lines):
         if not cleaned_line:
             continue
         if not flag:
-            zagolovok = [j.strip() for i in cleaned_line.split(',')]
+            zagolovok = [j.strip() for j in cleaned_line.split(',')]
             flag = True
             continue
         znacheniya = [x.strip() for x in i.split(',')]
@@ -30,12 +30,12 @@ def total_minutes(rows, kind):
     sm = 0
     for i in rows:
         if i["тип"] == kind:
-            cleaned_time = i["минуты"].replace('.', ',')
-        try:
-            time_float = float(clean_time)
-            sm += time_float
-        except ValueError:
-            continue
+            clean_time = i["минуты"].replace(',', '.')
+            try:
+                time_float = float(clean_time)
+                sm += time_float
+            except ValueError:
+                continue
     return round(sm, 1)
 
 def to_csv(counts):
