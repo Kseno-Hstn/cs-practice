@@ -34,7 +34,7 @@ def total_minutes(rows, kind):
         try:
             time_float = float(clean_time)
             sm += time_float
-        exept ValueError:
+        except ValueError:
             continue
     return round(sm, 1)
 
