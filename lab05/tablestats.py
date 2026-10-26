@@ -25,3 +25,15 @@ def count_types(rows):
         else:
             result[value_type] = 1
     return result
+
+def total_minutes(rows, kind):
+    sm = 0
+    for i in rows:
+        if i["тип"] == kind:
+            cleaned_time = i["минуты"].replace('.', ',')
+        try:
+            time_float = float(clean_time)
+            sm += time_float
+        exept ValueError:
+            continue
+    return round(sm, 1)
