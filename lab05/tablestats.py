@@ -15,3 +15,13 @@ def read_rows(lines):
         slovar = dict(zip(zagolovok, znacheniya)
         result.append(slovar)
     return result
+
+def count_types(rows):
+    result = {}
+    for i in rows:
+        value_type = i['тип']
+        if value_type in result:
+            result[value_type] += 1
+        else:
+            result[value_type] = 1
+    return result
