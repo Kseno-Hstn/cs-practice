@@ -12,7 +12,7 @@ def unique_sorted(values):
     return values
 
 def common(first, second):
-    result = [i for i in first if i in second]
+    result = sorted([i for i in first if i in second])
     return result
 
 def only_in_first(first, second):
