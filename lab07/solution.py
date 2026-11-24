@@ -13,7 +13,7 @@ def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> lis
 
 def column_means(matrix: list[list[float]]) -> list[float]:
     arr = np.asarray(matrix, dtype=float)
-    means = arr.mean(axis=0)
+    means = arr.mean(axis=1)
     return np.round(means, 6).tolist()
 
 def column_range(matrix: list[list[float]], column: int) -> float:
@@ -21,3 +21,6 @@ def column_range(matrix: list[list[float]], column: int) -> float:
     col = arr[:, column]
     spread = float(col.max() - col.min())
     return round(spread, 6)
+
+matrix = np.arange(1,61).reshape(5,12)
+print(column_means(matrix))

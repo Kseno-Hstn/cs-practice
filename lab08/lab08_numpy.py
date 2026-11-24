@@ -3,6 +3,7 @@ import numpy as np
 #Задание 1
 hours = np.arange(0, 22, 3)
 line = np.linspace(0, 1, 5)
+print(line)
 zero = np.zeros(6, int)
 unknown_table = np.full((2,3), -1)
 identity = np.full((3,3), 1)
@@ -25,12 +26,12 @@ temperatures = np.array([
     [10, 12, 15, 18], ])
 print('ЗАДАНИЕ 3')
 print(f'Форма {temperatures.shape}',
-      f'Число измерений {temperatures.ndim}, форма {temperatures.ndim.shape}',
-      f'Число элементов {temperatures.size}, форма {temperatures.size.shape}',
+      f'Число измерений {temperatures.ndim}, форма {temperatures.shape}',
+      f'Число элементов {temperatures.size}',
       f'Значение из второй строки и третьего столбца {temperatures[1,2]}, форма {temperatures[1,2].shape}',
-      f'Первая строка: {temperatures[0]}, форма {temperatures.temperatures[0].shape}',
-      f'Последний столбец: {temperatures[:, -1]}, форма {temperatures.temperatures[:, -1].shape}',
-      f'Первые две строки без первого столбца: {temperatures[1:4, :3]}, форма {temperatures.ndim.shape}',
+      f'Первая строка: {temperatures[0]}, форма {temperatures[0].shape}',
+      f'Последний столбец: {temperatures[:, -1]}, форма {temperatures[:, -1].shape}',
+      f'Первые две строки без первого столбца: {temperatures[1:4, :3]}, форма {temperatures.shape}',
       f'Фрагмент: {temperatures[0:1, 1:2]}, форма {temperatures[0:1, 1:2].shape}', sep='\n', end='\n')
 
 #Задание 4
@@ -52,6 +53,7 @@ changed_matrix = matrix.copy()
 changed_matrix[1, :] = 0
 changed_matrix[:, -1] = -1
 changed_matrix[1:4, 1:4] = 100
+print(changed_matrix * 0.5)
 print(f'Исходная матрица: {matrix}', f'Новая матрица: {changed_matrix}', sep='/n')
 
 #Задание 6
