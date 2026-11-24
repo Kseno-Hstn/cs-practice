@@ -31,7 +31,7 @@ print(f'Форма {temperatures.shape}',
       f'Первая строка: {temperatures[0]}, форма {temperatures.temperatures[0].shape}',
       f'Последний столбец: {temperatures[:, -1]}, форма {temperatures.temperatures[:, -1].shape}',
       f'Первые две строки без первого столбца: {temperatures[1:4, :3]}, форма {temperatures.ndim.shape}',
-      f'Фрагмент: {temperatures[0:1, 1:2], форма {temperatures[0:1, 1:2].shape}', sep='\n', end='\n')
+      f'Фрагмент: {temperatures[0:1, 1:2]}, форма {temperatures[0:1, 1:2].shape}', sep='\n', end='\n')
 
 #Задание 4
 matrix = np.arange(1, 26).reshape(5, 5)
